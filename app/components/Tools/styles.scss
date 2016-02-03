@@ -1,0 +1,61 @@
+:local(.styles) {
+  position: relative;
+  padding: 40px 0;
+  /* Start of Column CSS */
+  .footer {
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+  .left {
+    position: absolute;
+    left: 0px;
+    width: 100px;
+    padding: 10px;
+  }
+  .leftbox {
+    float: left;
+    width: 560px;
+    border-color: #9da0a4;
+  }
+  .middlebox {
+    float: left;
+    border-color: #9da0a4;
+    border: solid;
+    width: 5px;
+    height: 600px;
+  }
+  .tool {
+    text-align: center;
+    margin: 30px 0;
+
+    img {
+      width: 80%;
+    }
+  }
+  tr {
+    align-content: center;
+  }
+  th {
+    align-content: center;
+  }
+  table {
+    align-content: center;
+  }
+  .container {
+    text-align: center;
+    padding: 0px 0;
+    border: 0px 0;
+  }
+  .block {
+    display: inline-block;
+  }
+  .col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: center;
+    /* inline-block space fix */
+    margin-right: -4px;
+  }
+}

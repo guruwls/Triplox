@@ -1,0 +1,313 @@
+//@import '../../containers/App/styles/screens';
+
+:local(.styles) {
+  position: fixed;
+  z-index: 1;
+
+  width: 100%;
+
+  padding: 20px 0;
+  opacity: 1;
+
+  //background: rgba(0, 0, 0, .7);
+
+  //&:hover {
+  //  background: rgba(0, 0, 0, .7);
+  //}
+
+  label {
+    padding-right: 20px;
+  }
+
+  a {
+    color: #FFF;
+  }
+
+  .logo {
+
+    a {
+      font-weight: bold;
+    }
+  }
+
+  .text-right {
+    top: -5px;
+    padding-right: 40px;
+  }
+
+
+  .vamola {
+    border-radius: 30px;
+  }
+
+  nav {
+
+    a {
+      margin-right: 20px;
+
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .el-animation-appear {
+    opacity: .01
+  }
+
+  .el-animation-appear.el-animation-appear-active {
+    opacity: 1;
+    transition: .7s linear
+  }
+
+  .top-header {
+    position: absolute;
+    z-index: 12;
+    width: 100%;
+    padding: 30px 0 30px;
+    transition: .3s
+  }
+
+  //.top-header span.logo {
+  //  display: inline-block;
+  //  width: 103px;
+  //  height: 43px;
+  //  background: rgba(0, 0, 0, .7);
+  //  //background: url(files/pebbles-1090536_1920.jpg);
+  //  //background: url(" + require(" ../files/logo.png ") + ");
+  //  background-repeat: no-repeat;
+  //  background-size: 100% auto;
+  //  position: relative;
+  //  top: -3px
+  //}
+
+  .top-header nav a {
+    color: #d2fff5;
+    font-family: SupriaSans Regular;
+    font-size: 16px;
+    border-bottom: none;
+    position: relative;
+    top: 5px;
+    margin-right: 40px;
+    transition: 1s
+  }
+
+  .top-header nav a.active, .top-header nav a:hover {
+    border-bottom: 7px solid #fff
+  }
+
+  .logo-symbol {
+    position: fixed;
+    z-index: 15;
+    top: 25px;
+    left: 30px;
+    display: inline-block;
+    transition: 2s;
+    width: 160px;
+    height: 202px;
+    //background: rgba(0, 0, 0, .7);
+    background: url(files/logo.png);
+
+    //background: url(" + require(" ../files/logo-symbol.png ") + ");
+    background-repeat: no-repeat;
+    background-size: 100% auto
+  }
+
+  .logo-small {
+    position: fixed;
+    z-index: 13;
+    top: 20px;
+    left: 20px;
+    display: inline-block;
+    transition: .4s;
+
+    //width: 98px;
+    //height: 30px;
+    width: 95px;
+    height: 20px;
+    background: url(files/logo.png);
+
+    //background: url(" + require(" ../files/small-logo.png ") + ");
+    background-repeat: no-repeat;
+    background-size: 100% auto
+  }
+
+  @media(max-width: 768px) {
+    .logo-symbol {
+      position: fixed;
+      width: 114px;
+      height: 40px;
+      top: 20px;
+      left: 20px;
+      //background: url(" + require(" ../files/logo-phone.png ") + ");
+      background-repeat: no-repeat;
+      background-size: 100% auto
+    }
+  }
+
+  button.login, button.signup {
+    color: #ffef79;
+    font-family: SupriaSans Regular;
+    font-size: 14px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background: none;
+    padding: 6px 30px;
+    position: relative
+  }
+
+  button.login:hover, button.signup:hover {
+    background: #fff;
+    color: #009b69
+  }
+
+  @media(max-width: 768px) {
+    button.login, button.signup {
+      margin: 30px 0
+    }
+  }
+
+  button.login.signup, button.signup.signup {
+    background: hsla(0, 0%, 100%, .8);
+    color: #009b69;
+    margin-left: 20px
+  }
+
+  button.login.signup:hover, button.signup.signup:hover {
+    background: #fff
+  }
+
+  .green-header {
+    position: fixed;
+    //z-index: 10;
+    width: 100%;
+    height: 75px;
+    opacity: 0;
+    transition: .4s
+  }
+
+  .green-header.show {
+    background: #6890b2;
+    opacity: 1
+  }
+
+  .fixed-header {
+    position: fixed;
+    z-index: 10;
+    padding: 20px 0 0;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    color: #FFF;
+    font-size: large;
+    transition: background 1s
+  }
+
+  .fixed-header.background {
+    background: #6890b2;
+    opacity: .9;
+  }
+
+  span.burger {
+    width: 23px;
+    height: 12px;
+    background: url(files/tools.svg);
+
+    //background: url(" + require(" ../files/burger.svg ") + ");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    top: 30px;
+    right: 20px;
+    position: fixed
+  }
+
+  span.burger.cross {
+    width: 15px;
+    height: 14px;
+    background: url(files/close.svg);
+    filter: invert(100%);
+    background-size: cover;
+    background-repeat: no-repeat
+  }
+
+  .phone-menu {
+    display: none;
+    background: #009b69;
+    position: fixed;
+    //z-index: 2;
+    width: 100%
+  }
+
+  .phone-menu.show {
+    display: block
+  }
+
+  @media(max-width: 768px) {
+    .phone-menu span {
+      margin-left: 20px
+    }
+  }
+
+  .phone-menu nav {
+    margin-top: 80px
+  }
+
+  .phone-menu nav a {
+    color: #fff;
+    display: block;
+    padding: 20px;
+    width: 100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    margin-top: -1px
+  }
+
+  .phone-menu .login {
+    margin: 30px 0
+  }
+
+  .black-layer {
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    position: fixed;
+    //z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0
+  }
+
+  .black-layer.show {
+    display: block
+  }
+
+  .fixed-nav {
+    position: fixed;
+    left: 160px
+  }
+
+  .fixed-nav a {
+    margin-right: 40px
+  }
+
+  .login-fixed-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    top: 35px
+  }
+
+  .login-fixed-button.fixed {
+    top: 20px
+  }
+
+  .login-fixed-button .no-show {
+    opacity: 0
+  }
+
+  .no-show {
+    opacity: 0
+  }
+
+}
